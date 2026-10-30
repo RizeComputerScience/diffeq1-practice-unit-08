@@ -2630,10 +2630,10 @@ var CLOSE2 = 'Close. Keep two decimal places, and round only at the end.';
 var SECTIONS_P = [
   { id: 'sec-undamped', title: 'Forcing Without Damping', lede: 'This goes with BDH Section 4.3, pages 415, 416 and 419. Lebl’s [Subsection 2.6.1](' + T_UNDAMP[0] + ') is a second explanation. Lebl writes `x` for our `y` and `F_0` for our `F`.' },
   { id: 'sec-steady', title: 'Damping and the Steady State', lede: 'These go with BDH Section 4.2, pages 403 to 405 and 407. Paul’s [Undetermined Coefficients](' + T_UCSIN[0] + ') page is a second explanation. Paul writes `y_c` for our `y_h`.' },
-  { id: 'sec-beats', title: 'Beats', lede: 'This goes with BDH Section 4.3, pages 417 to 419, and the note on the time between quiet moments in Part 1 of the Reading Guide.' },
-  { id: 'sec-res', title: 'Resonance', lede: 'This goes with BDH Section 4.3, pages 420 to 423, and the explainer Why Resonance Grows Like t sin t. Paul’s [Mechanical Vibrations](' + T_RES[0] + ') page is a second explanation. Paul writes `u` for the position.' },
-  { id: 'sec-prac', title: 'Practical Resonance', lede: 'This goes with BDH Section 4.4, page 429, and the explainer Damping, the Steady State and the Amplitude Curve. Lebl’s [Subsection 2.6.2](' + T_DAMPED[0] + ') is a second explanation, and it writes `c` for our `b`.' },
-  { id: 'sec-vop', title: 'Variation of Parameters', lede: 'This goes with Lebl’s [Subsection 2.5.3](' + T_LVOP[0] + ') and Part 2 of the Reading Guide. Paul’s [Variation of Parameters](' + T_VOP[0] + ') page is a second explanation.' },
+  { id: 'sec-beats', title: 'Beats', lede: 'This goes with BDH Section 4.3, pages 417 to 419, and the note on quiet moments in Beats, in the Unit 8 Reading Guide, Part 1.' },
+  { id: 'sec-res', title: 'Resonance', lede: 'This goes with BDH Section 4.3, pages 420 to 423, and the section Why Resonance Grows Like t sin t in the Unit 8 Reading Guide, Part 1. Paul’s [Mechanical Vibrations](' + T_RES[0] + ') page is a second explanation. Paul writes `u` for the position.' },
+  { id: 'sec-prac', title: 'Practical Resonance', lede: 'This goes with BDH Section 4.4, page 429, and the section Damping, the Steady State and the Amplitude Curve in the Unit 8 Reading Guide, Part 1. Lebl’s [Subsection 2.6.2](' + T_DAMPED[0] + ') is a second explanation, and it writes `c` for our `b`.' },
+  { id: 'sec-vop', title: 'Variation of Parameters', lede: 'This goes with Lebl’s [Subsection 2.5.3](' + T_LVOP[0] + ') and the Unit 8 Reading Guide, Part 2. Paul’s [Variation of Parameters](' + T_VOP[0] + ') page is a second explanation.' },
   { id: 'sec-map', title: 'Choosing the Method', lede: 'This puts the unit’s methods side by side, as the Unit 8 Key Ideas Card does.' }
 ];
 
@@ -2658,7 +2658,7 @@ var PROBLEMS = [
           ['1.2', 'Differentiating `cos 2t` twice gives `−4 cos 2t`, with a minus sign, so `2y_p″` takes away `8A cos 2t`.']],
         hints: ['Here `y_p″ = −4A cos 2t`. Put `y_p` and `y_p″` into `2y″ + 32y` and collect the `cos 2t` terms.'],
         sol: ['`2(−4A cos 2t) + 32A cos 2t = 24A cos 2t = 48 cos 2t`, so `A = 2`'],
-        why: 'The Reading Guide’s formula agrees: `F{48}{2(16 − 4)} = 2`.' },
+        why: 'The formula in Beats, in the Unit 8 Reading Guide, Part 1, agrees: `F{48}{2(16 − 4)} = 2`.' },
       { lead: 'Now set `ω = 6`, above `ω_0`. Use the trial `y_p = A cos 6t`.', ask: 'A =', num: true, ans: '-1.2',
         wrongs: [['1.2', 'Here `32 − 2 · 36 = −40`, so the equation is `−40A = 48`, and `A` is negative.'],
           ['-2.4', 'That is `F{48}{16 − 36}`, which leaves out the mass. Substituting gives `(32 − 2 · 36)A = 48`.'],
@@ -2718,7 +2718,7 @@ var PROBLEMS = [
         wrongs: [['7', 'The two terms peak at different times, so their coefficients do not add. Use `R = sqrt(A^2 + B^2)`.'],
           ['25', 'That is `R^2`. Take the square root.'],
           ['1', 'The amplitude is `sqrt(A^2 + B^2)`, not `A − B`.']],
-        hints: ['Use `R = sqrt(A^2 + B^2)`, from Part 1 of the Reading Guide.'],
+        hints: ['Use `R = sqrt(A^2 + B^2)`, from Transient and Steady State in the Unit 8 Reading Guide, Part 1.'],
         sol: ['`R = sqrt(4^2 + 3^2) = sqrt(25) = 5`'],
         why: 'The amplitude formula agrees. Here `k − mω^2 = 8` and `bω = 6`, so `R = F{50}{sqrt(64 + 36)} = 5`.' },
       { lead: 'Every solution approaches `y_(ss)`, whatever its start. In what sense is `y_(ss)` steady?', ok: 0, pick: [
@@ -2842,7 +2842,7 @@ var PROBLEMS = [
           ['0.5', 'Solve `16B = 32` by dividing 32 by 16.']],
         hints: ['The cosine terms give `16B = 32`.'],
         sol: ['`16B = 32`, so `B = 2`'],
-        why: 'The Reading Guide’s formula agrees: `F{32}{2 · 1 · 8} = 2`.' },
+        why: 'The formula in Why Resonance Grows Like t sin t, in the Unit 8 Reading Guide, Part 1, agrees: `F{32}{2 · 1 · 8} = 2`.' },
       { lead: 'Write the particular solution.', ask: 'y_p =', ans: '2tsin(8t)', stray: [['A', AB_MSG], ['B', AB_MSG], ['C', YP_C]],
         wrongs: [['2tcos(8t)', '`B = 2` multiplies the sine in `t(A cos 8t + B sin 8t)`, and `A = 0`. Cosine forcing gives `t sin 8t`.'],
           ['2sin(8t)', 'Keep the factor `t` from the trial, `y_p = t(A cos 8t + B sin 8t)`.'],
@@ -2898,7 +2898,7 @@ var PROBLEMS = [
           ['5', 'That is `β`, the frequency at which the transient swings. The peak is at `ω = sqrt(s)`.'],
           ['-4', 'A frequency is positive. Take the positive square root of 16.']],
         hints: ['`ω = sqrt(s)`, with `s = 16`.'],
-        why: 'The Reading Guide’s formula agrees: `sqrt(F{k}{m} − F{b^2}{2m^2}) = sqrt(34 − 18) = 4`.' },
+        why: 'The formula in Damping, the Steady State and the Amplitude Curve, in the Unit 8 Reading Guide, Part 1, agrees: `sqrt(F{k}{m} − F{b^2}{2m^2}) = sqrt(34 − 18) = 4`.' },
       { lead: 'Find the largest amplitude.', ask: 'R =', num: true, ans: '2', tol: 0.011,
         wrongs: [[['0.0667', '0.067', '1/15'], 'That is `F{60}{D}`. Take the square root of `D` first: `R = F{60}{sqrt(900)}`.'],
           ['2.5', 'Keep the `(34 − s)^2` part: `D = (34 − 16)^2 + 36 · 16`, which is `324 + 576`.'],
